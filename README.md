@@ -112,7 +112,5 @@ code for [iOS安全之路](http://www.jianshu.com/collection/63d04a345984)
     
     NSString * decWithPrivKey = [CATSecurity rsaDecryptString:encWithPubKey privateKey:privkey];
     NSLog(@"Decrypted with private key: %@", decWithPrivKey);
-}
-
 
 ```
