@@ -151,4 +151,68 @@
  */
 +(NSString*)aes256DecryptStringWithData:(NSData *)data key:(NSString *)key;
 
+
+#pragma mark --
+#pragma mark -- RSA
+
+/**
+ *  rsa encrypt string with public key
+ *
+ *  @param str    : source string
+ *  @param pubKey : public key
+ *
+ *  @return base64 encoded string
+ */
++ (NSString *)rsaEncryptString:(NSString *)str publicKey:(NSString *)pubKey;
+
+/**
+ *  rsa encrypt data with public key
+ *
+ *  @param str    : source string
+ *  @param pubKey : public key
+ *
+ *  @return raw data
+ */
++ (NSData *)rsaEncryptData:(NSData *)data publicKey:(NSString *)pubKey;
+
+/**
+ *  rsa decrypt string with public key
+ *
+ *  @param str    : base64 encoded string
+ *  @param pubKey : public key
+ *
+ *  @return base64 encoded string
+ */
++ (NSString *)rsaDecryptString:(NSString *)str publicKey:(NSString *)pubKey;
+
+/**
+ *  rsa decrypt data with public key
+ *
+ *  @param data    : encoded data
+ *  @param pubKey : public key
+ *
+ *  @return raw data
+ */
++ (NSData *)rsaDecryptData:(NSData *)data publicKey:(NSString *)pubKey;
+
+/**
+ *  rsa decrypt string with private key
+ *
+ *  @param str    : base64 encoded string
+ *  @param privKey : private key
+ *
+ *  @return NSString
+ */
++ (NSString *)rsaDecryptString:(NSString *)str privateKey:(NSString *)privKey;
+
+/**
+ *  rsa decrypt data with private key
+ *
+ *  @param data    : encoded data
+ *  @param privKey : private key
+ *
+ *  @return NSData
+ */
++ (NSData *)rsaDecryptData:(NSData *)data privateKey:(NSString *)privKey;
+
 @end
